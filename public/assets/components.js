@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import jquery from 'jquery';
+
 class CommentBox extends React.Component {
 
   constructor() {
@@ -266,6 +270,9 @@ class CommentRemoveConfirmation extends React.Component {
 jQuery(function() {
   ReactDOM.render(
     <CommentBox />,
-    document.getElementById('comment-box')
+    document.getElementById('comment-box'),
+    function() {
+      console.timeEnd('react-app');
+    }
   );
 })
